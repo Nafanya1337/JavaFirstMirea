@@ -56,6 +56,8 @@ class task1_1 {
         System.out.print("Размерность массива: ");
         int[] mas = new int[in.nextInt()];
         int temp = (100-1)+1;
+        System.out.println("Библиотека Math");
+
         for (int i = 0;i<mas.length;i++)
         {
             mas[i] = (int)(Math.random()*temp) + 1;
@@ -66,6 +68,21 @@ class task1_1 {
         for (int i = 0;i<mas.length;i++) {
             System.out.print(mas[i] + " ");
         }
+
+        System.out.println("\nБиблиотека Random");
+        Random random = new Random();
+
+        for (int i = 0;i<mas.length;i++)
+        {
+            mas[i] = random.nextInt(1,50);
+            System.out.print(mas[i] + " ");
+        }
+        System.out.println();
+        mas = Arrays.stream(mas).sorted().toArray();
+        for (int i = 0;i<mas.length;i++) {
+            System.out.print(mas[i] + " ");
+        }
+
     }
 }
 
